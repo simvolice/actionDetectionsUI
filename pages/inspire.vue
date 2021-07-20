@@ -11,7 +11,13 @@
           <v-data-table
             :headers="headers"
             :items="camerasArr"
-          ></v-data-table>
+          >
+
+
+            <template #[`item.urlVideo`]="{ item }">
+              <a :href='item.urlVideo' target='_blank'>Видео</a>
+            </template>
+          </v-data-table>
         </v-card>
       </v-col>
 
@@ -39,15 +45,24 @@ export default {
           address: 'ул. 23-15, 9/1, ЖК "Миллениум Парк"',
           dateCreated: "25.05.2021",
           typeViolation: 'Курение в общественно месте',
-          urlVideo: 'Ссылка на видео с моментом правонарушения. Доступна в личной версии системы',
+          urlVideo: 'videos/smoke1.gif',
         },
         {
-          name: 'Камера 2, Подъезд №1',
+          name: 'Камера 1, Подъезд №1',
           address: 'ул. 23-15, 9/1, ЖК "Миллениум Парк"',
-          dateCreated: "26.05.2021",
-          typeViolation: 'Удар рукой',
-          urlVideo: 'Ссылка на видео с моментом правонарушения. Доступна в личной версии системы',
+          dateCreated: "25.05.2021",
+          typeViolation: 'Курение в общественно месте',
+          urlVideo: 'videos/smoke888.gif',
         },
+
+        {
+          name: 'Камера 1, Подъезд №1',
+          address: 'ул. 23-15, 9/1, ЖК "Миллениум Парк"',
+          dateCreated: "25.05.2021",
+          typeViolation: 'Курение в общественно месте',
+          urlVideo: 'videos/smoke3333555.gif',
+        },
+
       ],
     }
   },
